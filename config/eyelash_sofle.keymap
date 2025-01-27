@@ -61,7 +61,7 @@
 &kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1   &kp SPACE    &kp ENTER        &kp SPACE  &mo 2   &kp RIGHT_SHIFT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
             display-name = "LAYER0";
         };
 
@@ -75,6 +75,7 @@
             >;
 
             display-name = "layer1";
+            sensor-bindings = <&scroll_encoder>;
         };
 
         layer_2 {
