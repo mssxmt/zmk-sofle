@@ -35,7 +35,6 @@
             time-to-max-speed-ms = <400>;      // 500
             delay-ms = <0>;                   //   10
         };
-    };
 
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
@@ -43,6 +42,8 @@
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;;
 
         tap-ms = <30>;
+    };
+
     };
 
     keymap {
