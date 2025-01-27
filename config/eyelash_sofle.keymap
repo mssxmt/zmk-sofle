@@ -22,7 +22,7 @@
  */
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 100
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
 / {
     behaviors {
@@ -39,13 +39,13 @@
         };
     };
 
-scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-            // 追加: スクロールのタップ時間を設定 (20ms)
-            tap-ms = <20>;
-        };
+    scroll_encoder: scroll_encoder {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
+        tap-ms = <30>;
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -59,7 +59,7 @@ scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
 &kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1   &kp SPACE    &kp ENTER        &kp SPACE  &mo 2   &kp RIGHT_SHIFT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
             display-name = "LAYER0";
         };
 
