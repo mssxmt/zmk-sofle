@@ -70,7 +70,7 @@
 &kp C_MUTE        &kp LEFT_ALT  &kp LEFT_GUI  &kp CAPS  &kp SPACE  &mo 1     &kp ENTER        &mo 2   &kp SPACE  &kp RIGHT_SHIFT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
 
-            sensor-bindings = <&new_scroll>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
             display-name = "LAYER0";
         };
 
