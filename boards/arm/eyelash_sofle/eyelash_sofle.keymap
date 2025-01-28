@@ -20,7 +20,7 @@
  */
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 100    // 10
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
 
 / {
@@ -43,7 +43,7 @@
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
-        tap-ms = <20>;
+        tap-ms = <30>;
     };
 
     keymap {
