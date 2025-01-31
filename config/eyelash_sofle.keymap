@@ -46,7 +46,7 @@
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
-        bindings = <&msc>, <&msc>;
+        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
         tap-ms = <10>;
     };
 
@@ -76,7 +76,7 @@
             >;
 
             display-name = "layer1";
-            sensor-bindings = <&scroll_encoder SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
         layer_2 {
