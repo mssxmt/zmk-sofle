@@ -1,3 +1,4 @@
+layout: {zmk_keyboard: eyelash_sofle}
 layers:
   LAYER0:
   - $$mdi:keyboard-esc$$
@@ -88,7 +89,7 @@ layers:
   - PG UP
   - END
   - $$mdi:arrow-up-bold$$
-  - HOME
+  - +
   - {t: '-', s: _}
   - {t: '=', s: +}
   - {t: '$$mdi:transfer$$', type: trans}
